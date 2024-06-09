@@ -12,7 +12,7 @@ class Game:
         self.running = True
         self.state = "start_menu"
         self.game_map = GameMap()  # Initialize the GameMap instance
-        self.player = Player(GameConfig.PLAYER_SPRITESHEET_IDLE_PATH, GameConfig.PLAYER_SPRITESHEET_PATH,GameConfig.PLAYER_SPRITESHEET_PATH, GameConfig.PLAYER_START_POSITION, GameConfig.TILE_SIZE_32, self.game_map)
+        self.player = Player(GameConfig.PLAYER_SPRITESHEET_IDLE_PATH, GameConfig.PLAYER_SPRITESHEET_PATH,GameConfig.PLAYER_SPRITESHEET_PATH, GameConfig.PLAYER_START_POSITION, self.game_map)
         self.main_menu = MainMenu(self.screen, self.start_game, self.show_options, self.quit_game)
         self.options_menu = OptionsMenu(self.screen, self.show_main_menu)
 

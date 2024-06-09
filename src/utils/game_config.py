@@ -8,7 +8,7 @@ class GameConfig:
     # Define file paths and other global variables
     TILE_SET_PATH = "../assets/graphics/Dungeon_Tileset.png"
     PLAYER_SPRITESHEET_IDLE_PATH = "../assets/graphics/player/main_Idle.png"
-    PLAYER_SPRITESHEET_PATH = "../assets/graphics/player/Char_008.png"
+    PLAYER_SPRITESHEET_PATH = "../assets/graphics/player/main_Run.png"
     MAP_PATH = "../assets/maps/map.txt"
     
     
@@ -29,6 +29,8 @@ class GameConfig:
     PLAYER_JUMP_STRENGTH = 8
     PLAYER_SIZE_48 = 48
     PLAYER_START_POSITION = [100, 100]
+    PLAYER_WIDTH = 120
+    PLAYER_HEIGHT = 80
 
 # Example usage:
 # print(GameConfig.SPRITESHEET_PATH)
