@@ -9,7 +9,9 @@ class Player:
         self.animation_speed = 0.1  # Adjust animation speed as needed
         self.last_frame_update = pygame.time.get_ticks()
         self.map = map
-        self.position = position
+        
+        self.positionX = position[0]
+        self.positionY = position[1]
         
         self.idle_animation = Animation(idle_sprite_sheet_path, GameConfig.PLAYER_WIDTH, GameConfig.PLAYER_HEIGHT, scale_factor)
         self.move_animation = Animation(move_sprite_sheet_path, GameConfig.PLAYER_WIDTH, GameConfig.PLAYER_HEIGHT, scale_factor)
