@@ -1,16 +1,18 @@
 import pygame
 from animation.animation import Animation
 from physics.movement import Movement
+from utils.game_config import GameConfig
 
 class Player:
-    def __init__(self, idle_sprite_sheet_path, move_sprite_sheet_path, jump_sprite_sheet_path, position, tile_size, player_size=48, scale_factor=1):
+    def __init__(self, idle_sprite_sheet_path, move_sprite_sheet_path, jump_sprite_sheet_path, position, tile_size, map, player_size=GameConfig.PLAYER_SIZE_48, scale_factor=GameConfig.SCALE_FACTOR):
         self.idle_animation = Animation(idle_sprite_sheet_path, tile_size, scale_factor)
         self.move_animation = Animation(move_sprite_sheet_path, tile_size, scale_factor)
         self.jump_animation = Animation(jump_sprite_sheet_path, tile_size, scale_factor)
-        self.movement = Movement(position, 2, 8, player_size, scale_factor)  # Adjust jump strength as needed
+        self.movement = Movement(position, GameConfig.PLAYER_SPEED, GameConfig.PLAYER_JUMP_STRENGTH, player_size, scale_factor)  # Adjust jump strength as needed
         self.frame_index = 0
         self.animation_speed = 0.1  # Adjust animation speed as needed
         self.last_frame_update = pygame.time.get_ticks()
+        self.map = map
 
     def update(self, keys, game_map):
         self.movement.update(keys, game_map)

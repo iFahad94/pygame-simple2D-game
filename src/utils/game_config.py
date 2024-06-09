@@ -10,14 +10,23 @@ class GameConfig:
     PLAYER_SPRITESHEET_IDLE_PATH = "../assets/graphics/player/char_008_idle.png"
     PLAYER_SPRITESHEET_PATH = "../assets/graphics/player/Char_008.png"
     MAP_PATH = "../assets/maps/map.txt"
-    TILE_SIZE = 32
+    
+    
+    TILE_SIZE_32 = 32
+    TILE_SIZE_48 = 48
     SCREEN_WIDTH = 800
     SCREEN_HEIGHT = 600
     PLAYER_START_POSITION = [100, 100]
+    SCALE_FACTOR = 1
+    PLAYER_SIZE_48 = 48
 
     # Add other global settings as needed
     FPS = 60
     BACKGROUND_COLOR = (0, 0, 0)  # Black
+    
+    PLAYER_SPEED = 2
+    PLAYER_HEALTH = 100
+    PLAYER_JUMP_STRENGTH = 8
 
 # Example usage:
 # print(GameConfig.SPRITESHEET_PATH)

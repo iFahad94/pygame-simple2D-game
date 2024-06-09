@@ -30,9 +30,9 @@ class MainMenu:
 
         self.screen.blit(title_text, (self.screen.get_width() // 2 - title_text.get_width() // 2, 100))
 
-        self.start_button = self.draw_button("Start", (self.screen.get_width() // 2, 250))
-        self.options_button = self.draw_button("Options", (self.screen.get_width() // 2, 350))
-        self.quit_button = self.draw_button("Quit", (self.screen.get_width() // 2, 450))
+        self.start_button = self.draw_button(GameConfig.GUI_START_BTN, (self.screen.get_width() // 2, 250))
+        self.options_button = self.draw_button(GameConfig.GUI_OPTION_BTN, (self.screen.get_width() // 2, 350))
+        self.quit_button = self.draw_button(GameConfig.GUI_QUIT_BTN, (self.screen.get_width() // 2, 450))
 
         pygame.display.flip()
 

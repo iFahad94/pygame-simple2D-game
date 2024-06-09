@@ -13,11 +13,6 @@ class Physics:
         if not self.on_ground:
             self.acceleration.y += self.gravity
 
-    def update_position(self, map_data):
-        self.velocity += self.acceleration
-        self.position += self.velocity
-        self.check_collision(map_data)
-
     def check_collision(self, map_data):
         # Implement collision detection logic here
         pass
