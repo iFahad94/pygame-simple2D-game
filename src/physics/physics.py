@@ -1,5 +1,6 @@
 import pygame
 
+from utils.game_config import GameConfig
 class Physics:
     def __init__(self, position, tile_size):
         self.position = pygame.Vector2(position)
@@ -7,7 +8,7 @@ class Physics:
         self.acceleration = pygame.Vector2(0, 0)
         self.on_ground = False
         self.tile_size = tile_size
-        self.gravity = 0.5
+        self.gravity = GameConfig.GRAVITY
 
     def apply_gravity(self):
         if not self.on_ground:

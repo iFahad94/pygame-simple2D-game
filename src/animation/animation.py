@@ -1,7 +1,9 @@
 import pygame
 
+from utils.game_config import GameConfig
+
 class Animation:
-    def __init__(self, sprite_sheet_path, tile_size, scale_factor=1):
+    def __init__(self, sprite_sheet_path, tile_size, scale_factor=GameConfig.SCALE_FACTOR):
         self.sprite_sheet = pygame.image.load(sprite_sheet_path).convert_alpha()
         self.tile_size = tile_size
         self.scale_factor = scale_factor
@@ -9,13 +11,11 @@ class Animation:
 
     def load_animations(self):
         animations = {
-            'down': [],
             'left': [],
-            'right': [],
-            'up': []
+            'right': []
         }
         for direction, row in zip(animations.keys(), range(4)):
-            for i in range(4):  # Assuming 4 frames per direction
+            for i in range(10):  # Assuming 4 frames per direction
                 frame = self.get_image(i, row)
                 animations[direction].append(frame)
         return animations
