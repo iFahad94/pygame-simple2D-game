@@ -45,5 +45,5 @@ class TileViewer:
 
 # Example usage
 if __name__ == "__main__":
-    viewer = TileViewer('assets/graphics/Dungeon_Tileset.png', 32)  # Adjust the path and tile size as needed
+    viewer = TileViewer('../../assets/graphics/Dungeon_Tileset.png', 32)  # Adjust the path and tile size as needed
     viewer.run()
